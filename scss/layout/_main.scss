@@ -1,0 +1,92 @@
+.section {
+  &-inner {
+    margin: 0px auto;
+    max-width: 1200px;
+    padding: 100px 0 70px;
+  }
+  &-head {
+    font-family: 'Noto Serif';
+    font-size: 60px;
+    font-style: italic;
+    letter-spacing: 6px;
+    &__white {
+      color: $color-01;
+      text-align: right;
+    }
+    &__white::after {
+      background-color: $color-01;
+      content: "";
+      display: inline-block;
+      height: 5px;
+      margin-left: 48px;
+      vertical-align: middle;
+      width: 200px;
+    }
+    &__black {
+      color: $color-02;
+      text-align: left;
+    }
+    &__black::after {
+      background-color: $color-02;
+      content: "";
+      display: inline-block;
+      height: 5px;
+      margin-left: 48px;
+      vertical-align: middle;
+      width: 200px;
+    }
+  }
+  &-foot {
+    font-family: 'Noto Serif';
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 4.5px;
+    &__white {
+      color: $color-01;
+      opacity: 5%;
+      text-align: left;
+    }
+    &__black {
+      color: $color-06;
+      text-align: right;
+    }
+  }
+  @include mq ('tab') {
+    &-inner {
+      padding: 100px 30px 40px;
+    }
+    &-head {
+      font-size: 45px;
+      letter-spacing: 4.5px;
+      &__white::after {
+        width: 150px;
+      }
+      &__black::after {
+        width: 150px;
+      }
+    }
+    &-foot {
+      font-size: 45px;
+      letter-spacing: 4.5px;
+    }
+  }
+  @include mq ('sp') {
+    &-inner {
+      padding: 100px 15px 40px;
+    }
+    &-head {
+      font-size: 30px;
+      letter-spacing: 3px;
+      &__white::after {
+        width: 100px;
+      }
+      &__black::after {
+        width: 100px;
+      }
+    }
+    &-foot {
+      font-size: 40px;
+      letter-spacing: 2px;
+    }
+  }
+}

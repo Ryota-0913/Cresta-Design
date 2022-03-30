@@ -1,0 +1,16 @@
+.footer {
+  &-copy {
+    color: $color-02;
+    font-family: 'Noto Serif';
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    padding: 29.5px 0;
+    text-align: center;
+  }
+  @include mq ('sp') {
+    &-copy {
+      padding: 30px 0;
+    }
+  }
+}

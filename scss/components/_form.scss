@@ -1,0 +1,93 @@
+.form {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 100px 0 80px;
+  text-align: center;
+  &-content {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &-name {
+    margin-bottom: 25px;
+  }
+  &-phone {
+    margin-bottom: 25px;
+  }
+  &-email {
+    margin-bottom: 25px;
+  }
+  &-other {
+    margin-bottom: 80px;
+  }
+  &-claim {
+    align-items: center;
+    display: flex;
+    margin-right: 20px;
+  }
+  &-hope {
+    align-items: center;
+    display: flex;
+    margin-right: 20px;
+  }
+  &-apply {
+    align-items: center;
+    display: flex;
+  }
+  &-label {
+    display: block;
+    font-family: 'Noto Serif';
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 7px;
+    text-align: left;
+    &__sub {
+      font-family: 'Noto Serif JP';
+      font-weight: 400;
+      line-height: 24px;
+      margin-left: 10px;
+    }
+  }
+  @include mq ('tab') {
+    padding: 100px 30px 80px;
+  }
+  @include mq ('sp') {
+    padding: 100px 15px 80px;
+    &-content {
+      flex-direction: column;
+    }
+    &-claim {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+    &-hope {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+    &-label {
+      &__sub {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+#name,#phone,#email,#other {
+  border: 1px solid $color-08;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+
+#name,#phone,#email {
+  height: 30px;
+}
+#other {
+  height: 171px;
+}
+
+#claim,#hope,#apply {
+  margin: 0;
+}

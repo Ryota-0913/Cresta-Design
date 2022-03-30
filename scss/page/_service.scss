@@ -1,0 +1,83 @@
+.service {
+  &-inner {
+    max-width: 100%;
+  }
+  &-head {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  &-foot {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0 70px;
+  }
+  &-link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-image {
+    &_text {
+      color: $color-01;
+      font-family: 'Noto Serif';
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 2px;
+      position: absolute;
+    }
+  }
+  @include mq ('tab') {
+    &-content {
+      display: block;
+    }
+    &-link {
+      margin-bottom: 20px;
+    }
+    &-link:last-of-type {
+      margin-bottom: 0;
+    }
+    &-inner {
+      padding: 0!important;
+    }
+    &-head {
+      padding-left: 30px;
+      padding-top: 100px;
+    }
+    &-foot {
+      padding-bottom: 40px;
+      padding-right: 30px;
+    }
+  }
+  @include mq ('sp') {
+    &-head {
+      padding-top: 100px;
+      padding-left: 15px;
+    }
+    &-foot {
+      padding-bottom: 40px;
+      padding-right: 15px;
+    }
+    &-content {
+      flex-direction: column;
+      margin: 80px 0 40px;
+    }
+    &-link {
+      margin-bottom: 30px;
+    }
+    &-link:last-of-type {
+      margin-bottom: 0;
+    }
+    &-image {
+      &_text {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.consept {
+  &-inner {
+    text-align: center;
+  }
+  &-lead {
+    font-family: 'Noto Serif JP';
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 45px;
+    margin: 70px 0 60px;
+  }
+  &-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+  }
+  &-text {
+    color: $color-05;
+    font-family: 'Noto Serif JP';
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    text-align: left;
+    width: 440px;
+  }
+  &-image {
+    width: 440px;
+  }
+  @include mq ('tab') {
+    &-content {
+      flex-wrap: wrap;
+    }
+    &-lead {
+      font-size: 25px;
+      margin: 62.5px 0 47.5px;
+    }
+    &-text {
+      margin-bottom: 35px;
+    }
+  }
+  @include mq ('sp') {
+    &-content {
+      flex-direction: column;
+    }
+    &-lead {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 30px;
+      margin: 55px 0 35px;
+    }
+    &-text {
+      margin-bottom: 30px;
+      width: 345px;
+    }
+    &-image {
+      width: 345px;
+      & img {
+        background-size: cover;
+        height: 150px;
+        width: 100%;
+      }
+    }
+  }
+}

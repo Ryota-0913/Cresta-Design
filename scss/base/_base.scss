@@ -1,0 +1,33 @@
+*
+**
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    opacity: 70%;
+    transition: .5s;
+  }
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
